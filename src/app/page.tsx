@@ -27,9 +27,9 @@ export default function ShopPage() {
         <h1>Our Collection</h1>
         <p>High-quality prints and plaques of the Sacred Hearts</p>
       </div>
-      <Suspense fallback={<ShopFallback />}>
-        <ShopClient products={PRODUCTS} categories={CATEGORIES} />
-      </Suspense>
+      <Suspense fallback={<p>Loading...</p>}>
+  <ShopClient products={PRODUCTS} categories={CATEGORIES} />
+</Suspense>
     </>
   );
 }

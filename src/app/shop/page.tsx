@@ -4,8 +4,7 @@ import ShopClient from './ShopClient';
 
 export const metadata: Metadata = {
   title: 'Shop',
-  description:
-    'Browse our full collection of 39 high-quality sacred prints and plaques. Sacred Heart of Jesus, Immaculate Heart of Mary, First Holy Communion, Marian images, and more.',
+  description: 'Browse our full collection of 39 high-quality sacred prints and plaques.',
 };
 
 export default function ShopPage() {

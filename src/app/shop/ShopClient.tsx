@@ -1,7 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { useSearchParams } from 'next/navigation';
+import { useState } from 'react';
 import { Product } from '@/lib/products';
 import ProductCard from '@/components/ProductCard';
 import styles from './shop.module.css';
@@ -12,15 +11,7 @@ interface Props {
 }
 
 export default function ShopClient({ products, categories }: Props) {
-  const searchParams = useSearchParams();
   const [activeFilter, setActiveFilter] = useState('All');
-
-  useEffect(() => {
-    const cat = searchParams.get('cat');
-    if (cat && categories.includes(cat)) {
-      setActiveFilter(cat);
-    }
-  }, [searchParams, categories]);
 
   const filtered =
     activeFilter === 'All' ? products : products.filter((p) => p.cat === activeFilter);
